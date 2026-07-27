@@ -1,0 +1,344 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1720" viewBox="0 0 1200 1720" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif">
+<defs>
+  <marker id="jarrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#c9a3d4"/>
+  </marker>
+  <filter id="jsoft" x="-25%" y="-25%" width="150%" height="150%">
+    <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#3b1c46" flood-opacity="0.10"/>
+  </filter>
+  <linearGradient id="beam" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#e8503a" stop-opacity="0.85"/>
+    <stop offset="100%" stop-color="#e8503a" stop-opacity="0.05"/>
+  </linearGradient>
+  <style>
+    .stage   { fill:#ffffff; stroke:#ece9ef; rx:16; filter:url(#jsoft); }
+    .art     { fill:#faf7fc; stroke:#eadff0; rx:12; }
+    .num     { font-size:15px; font-weight:700; fill:#ffffff; }
+    .numBg   { fill:#742774; }
+    .title   { font-size:21px; font-weight:600; fill:#201f1e; }
+    .body    { font-size:14px; fill:#484644; }
+    .note    { font-size:12.5px; fill:#8a8886; }
+    .mono    { font-family:Consolas, Menlo, monospace; font-size:13px; fill:#742774; }
+    .flowln  { stroke:#c9a3d4; stroke-width:2.5; fill:none; marker-end:url(#jarrow); }
+    /* illustration palette */
+    .skin    { fill:#e8b98f; }
+    .hair    { fill:#3f3242; }
+    .shirt   { fill:#742774; }
+    .shirt2  { fill:#8f3a8f; }
+    .metal   { fill:#5b5766; }
+    .metal2  { fill:#413d4c; }
+    .paper   { fill:#ffffff; stroke:#d8d3dd; }
+    .screen  { fill:#22202a; }
+    .glass   { fill:#f2f7fb; }
+    .accent  { fill:#0f9d8a; }
+    .amber   { fill:#e0a33e; }
+  </style>
+</defs>
+
+<rect width="1200" height="1720" fill="#ffffff"/>
+
+<text x="60" y="60" font-size="28" font-weight="700" fill="#201f1e">What actually happens at the handout desk</text>
+<text x="60" y="90" font-size="15" fill="#605e5c">Five steps, about four seconds, and nobody types anything.</text>
+
+<!-- ===================== STEP 1 ===================== -->
+<rect class="stage" x="60" y="120" width="1080" height="270"/>
+<rect class="art" x="84" y="144" width="330" height="222"/>
+
+<!-- ART 1: person scanning a badge at a desk scanner -->
+<g transform="translate(84,144)">
+  <!-- floor line -->
+  <rect x="0" y="182" width="330" height="40" fill="#f2ecf5"/>
+  <!-- person -->
+  <g transform="translate(38,26)">
+    <!-- body -->
+    <path class="shirt" d="M14,168 C14,120 30,104 52,104 C74,104 90,120 90,168 Z"/>
+    <!-- collar -->
+    <path class="shirt2" d="M40,104 L52,120 L64,104 Z"/>
+    <!-- neck -->
+    <rect class="skin" x="44" y="90" width="16" height="20" rx="6"/>
+    <!-- head -->
+    <circle class="skin" cx="52" cy="72" r="24"/>
+    <!-- hair -->
+    <path class="hair" d="M28,68 C28,46 76,46 76,68 C76,58 68,50 52,50 C36,50 28,58 28,68 Z"/>
+    <path class="hair" d="M27,68 C24,86 30,96 32,96 C28,86 30,74 31,68 Z"/>
+    <!-- lanyard -->
+    <path d="M44,106 L60,140" stroke="#0f9d8a" stroke-width="3" fill="none"/>
+    <path d="M60,106 L62,140" stroke="#0f9d8a" stroke-width="3" fill="none"/>
+    <!-- extended arm holding the card -->
+    <path class="shirt2" d="M86,128 C112,124 138,120 154,120 L154,136 C138,138 112,142 88,146 Z"/>
+    <!-- hand -->
+    <circle class="skin" cx="158" cy="128" r="11"/>
+  </g>
+  <!-- the badge, held up -->
+  <g transform="translate(196,152)">
+    <rect x="0" y="0" width="52" height="34" rx="4" fill="#ffffff" stroke="#c8c2cf"/>
+    <rect x="5" y="6" width="14" height="16" rx="2" class="accent" opacity="0.55"/>
+    <rect x="23" y="7" width="24" height="3" rx="1.5" fill="#b9b3c2"/>
+    <rect x="23" y="14" width="18" height="3" rx="1.5" fill="#d3ced9"/>
+    <g fill="#3f3242">
+      <rect x="5" y="26" width="2" height="6"/><rect x="9" y="26" width="1" height="6"/>
+      <rect x="12" y="26" width="3" height="6"/><rect x="17" y="26" width="1" height="6"/>
+      <rect x="20" y="26" width="2" height="6"/><rect x="24" y="26" width="1" height="6"/>
+      <rect x="27" y="26" width="3" height="6"/><rect x="32" y="26" width="1" height="6"/>
+      <rect x="35" y="26" width="2" height="6"/><rect x="39" y="26" width="3" height="6"/>
+      <rect x="44" y="26" width="1" height="6"/>
+    </g>
+  </g>
+  <!-- scanner beam -->
+  <rect x="250" y="160" width="34" height="4" rx="2" fill="url(#beam)"/>
+  <rect x="250" y="168" width="26" height="3" rx="1.5" fill="url(#beam)" opacity="0.6"/>
+  <!-- desk scanner -->
+  <g transform="translate(280,120)">
+    <path class="metal2" d="M2,84 L58,84 L64,102 L-4,102 Z"/>
+    <rect class="metal" x="6" y="34" width="44" height="54" rx="7"/>
+    <path class="metal2" d="M6,44 L50,34 L50,52 L6,60 Z"/>
+    <rect x="9" y="46" width="38" height="12" rx="3" fill="#2b2833"/>
+    <circle cx="46" cy="80" r="4" class="accent"/>
+    <rect class="metal2" x="18" y="88" width="20" height="6" rx="2"/>
+  </g>
+</g>
+
+<circle class="numBg" cx="462" cy="176" r="17"/>
+<text class="num" x="457" y="182">1</text>
+<text class="title" x="494" y="183">The employee scans their card</text>
+<text class="body" x="494" y="217">A handheld or desk scanner reads the badge and types the employee's email into the</text>
+<text class="body" x="494" y="240">app's text box, then sends an Enter — exactly as a keyboard would. Nobody touches a</text>
+<text class="body" x="494" y="263">mouse and nobody spells a surname out loud across a queue.</text>
+<text class="note" x="494" y="296">The box is focused the moment the screen opens and re-arms itself after every scan, so a</text>
+<text class="note" x="494" y="317">queue of forty people is forty scans and nothing else.</text>
+<text class="mono" x="494" y="350">txtScan.Text → "dev@jgalili.onmicrosoft.com"</text>
+
+<path class="flowln" d="M600,390 L600,424"/>
+
+<!-- ===================== STEP 2 ===================== -->
+<rect class="stage" x="60" y="440" width="1080" height="270"/>
+<rect class="art" x="84" y="464" width="330" height="222"/>
+
+<!-- ART 2: the list being searched -->
+<g transform="translate(84,464)">
+  <g transform="translate(30,26)">
+    <rect x="0" y="0" width="270" height="150" rx="8" fill="#ffffff" stroke="#d8d3dd"/>
+    <rect x="0" y="0" width="270" height="26" rx="8" fill="#eef4fb"/>
+    <rect x="0" y="18" width="270" height="8" fill="#eef4fb"/>
+    <circle cx="14" cy="13" r="4" fill="#e8503a"/><circle cx="28" cy="13" r="4" fill="#e0a33e"/><circle cx="42" cy="13" r="4" fill="#0f9d8a"/>
+    <text x="62" y="17" font-size="10" fill="#6d7f95">GiftVouchers</text>
+
+    <!-- header row -->
+    <rect x="12" y="36" width="70" height="8" rx="4" fill="#cfd8e3"/>
+    <rect x="92" y="36" width="70" height="8" rx="4" fill="#cfd8e3"/>
+    <rect x="172" y="36" width="86" height="8" rx="4" fill="#cfd8e3"/>
+
+    <!-- matched rows -->
+    <rect x="8" y="54" width="254" height="26" rx="4" fill="#f5eef7" stroke="#c9a3d4"/>
+    <rect x="16" y="63" width="58" height="8" rx="4" fill="#a97cb5"/>
+    <rect x="92" y="63" width="62" height="8" rx="4" fill="#c9a3d4"/>
+    <rect x="172" y="63" width="80" height="8" rx="4" fill="#c9a3d4"/>
+
+    <rect x="8" y="86" width="254" height="26" rx="4" fill="#f5eef7" stroke="#c9a3d4"/>
+    <rect x="16" y="95" width="44" height="8" rx="4" fill="#a97cb5"/>
+    <rect x="92" y="95" width="62" height="8" rx="4" fill="#c9a3d4"/>
+    <rect x="172" y="95" width="58" height="8" rx="4" fill="#c9a3d4"/>
+
+    <!-- non-matching rows, faded -->
+    <rect x="8" y="118" width="254" height="22" rx="4" fill="#fafafa"/>
+    <rect x="16" y="126" width="50" height="7" rx="3.5" fill="#e6e4e2"/>
+    <rect x="92" y="126" width="62" height="7" rx="3.5" fill="#eceaea"/>
+    <rect x="172" y="126" width="66" height="7" rx="3.5" fill="#eceaea"/>
+  </g>
+  <!-- magnifier -->
+  <g transform="translate(228,120)">
+    <circle cx="0" cy="0" r="26" fill="none" stroke="#742774" stroke-width="6"/>
+    <circle cx="0" cy="0" r="22" fill="#742774" opacity="0.07"/>
+    <path d="M19,19 L38,38" stroke="#742774" stroke-width="8" stroke-linecap="round"/>
+  </g>
+</g>
+
+<circle class="numBg" cx="462" cy="496" r="17"/>
+<text class="num" x="457" y="502">2</text>
+<text class="title" x="494" y="503">Their rows are found by email</text>
+<text class="body" x="494" y="537">The email from the badge is matched against the list's person column. Every voucher</text>
+<text class="body" x="494" y="560">batch belonging to that employee comes back — one row per batch, however many</text>
+<text class="body" x="494" y="583">codes each of those rows happens to be carrying.</text>
+<text class="note" x="494" y="616">Nothing is found? The screen says so and stays put, ready for the next card. An employee</text>
+<text class="note" x="494" y="637">with no vouchers and an unrecognised badge look the same from here, and that is fine.</text>
+<text class="mono" x="494" y="670">Filter(GiftVouchers, Employee.Email = gblScanId)</text>
+
+<path class="flowln" d="M600,710 L600,744"/>
+
+<!-- ===================== STEP 3 ===================== -->
+<rect class="stage" x="60" y="760" width="1080" height="270"/>
+<rect class="art" x="84" y="784" width="330" height="222"/>
+
+<!-- ART 3: one row explodes into cards -->
+<g transform="translate(84,784)">
+  <!-- source row -->
+  <g transform="translate(24,34)">
+    <rect x="0" y="0" width="282" height="34" rx="5" fill="#ffffff" stroke="#c9a3d4"/>
+    <text x="12" y="22" font-family="Consolas, Menlo, monospace" font-size="12" fill="#484644">Rosh Hashana</text>
+    <text x="110" y="22" font-family="Consolas, Menlo, monospace" font-size="12" fill="#742774">T123;T543;T666</text>
+  </g>
+  <!-- splitting arrows -->
+  <path d="M92,74 L60,104" stroke="#c9a3d4" stroke-width="2.5" fill="none" marker-end="url(#jarrow)"/>
+  <path d="M165,74 L165,104" stroke="#c9a3d4" stroke-width="2.5" fill="none" marker-end="url(#jarrow)"/>
+  <path d="M238,74 L270,104" stroke="#c9a3d4" stroke-width="2.5" fill="none" marker-end="url(#jarrow)"/>
+  <!-- three cards -->
+  <g>
+    <g transform="translate(20,112)">
+      <rect x="0" y="0" width="80" height="86" rx="6" class="paper"/>
+      <rect x="22" y="10" width="36" height="36" rx="3" fill="#22202a"/>
+      <rect x="27" y="15" width="9" height="9" fill="#ffffff"/><rect x="44" y="15" width="9" height="9" fill="#ffffff"/>
+      <rect x="27" y="32" width="9" height="9" fill="#ffffff"/><rect x="42" y="30" width="6" height="6" fill="#ffffff"/>
+      <text x="40" y="62" font-family="Consolas, Menlo, monospace" font-size="12" fill="#201f1e" text-anchor="middle">T123</text>
+      <rect x="18" y="70" width="44" height="5" rx="2.5" fill="#e2dee6"/>
+    </g>
+    <g transform="translate(125,112)">
+      <rect x="0" y="0" width="80" height="86" rx="6" class="paper"/>
+      <rect x="22" y="10" width="36" height="36" rx="3" fill="#22202a"/>
+      <rect x="27" y="15" width="9" height="9" fill="#ffffff"/><rect x="44" y="15" width="9" height="9" fill="#ffffff"/>
+      <rect x="27" y="32" width="9" height="9" fill="#ffffff"/><rect x="46" y="34" width="6" height="6" fill="#ffffff"/>
+      <text x="40" y="62" font-family="Consolas, Menlo, monospace" font-size="12" fill="#201f1e" text-anchor="middle">T543</text>
+      <rect x="18" y="70" width="44" height="5" rx="2.5" fill="#e2dee6"/>
+    </g>
+    <g transform="translate(230,112)">
+      <rect x="0" y="0" width="80" height="86" rx="6" class="paper"/>
+      <rect x="22" y="10" width="36" height="36" rx="3" fill="#22202a"/>
+      <rect x="27" y="15" width="9" height="9" fill="#ffffff"/><rect x="44" y="15" width="9" height="9" fill="#ffffff"/>
+      <rect x="27" y="32" width="9" height="9" fill="#ffffff"/><rect x="40" y="36" width="6" height="6" fill="#ffffff"/>
+      <text x="40" y="62" font-family="Consolas, Menlo, monospace" font-size="12" fill="#201f1e" text-anchor="middle">T666</text>
+      <rect x="18" y="70" width="44" height="5" rx="2.5" fill="#e2dee6"/>
+    </g>
+  </g>
+</g>
+
+<circle class="numBg" cx="462" cy="816" r="17"/>
+<text class="num" x="457" y="822">3</text>
+<text class="title" x="494" y="823">One row becomes many cards</text>
+<text class="body" x="494" y="857">The codes live crammed into a single text cell, separated by semicolons. They get split</text>
+<text class="body" x="494" y="880">apart so that each one becomes its own record, carrying the batch name and the</text>
+<text class="body" x="494" y="903">employee's name along with it.</text>
+<text class="note" x="494" y="936">Two rows holding five codes become five cards. Blank entries — the kind a stray trailing</text>
+<text class="note" x="494" y="957">semicolon leaves behind — are dropped, so nobody is handed an empty voucher.</text>
+<text class="mono" x="494" y="990">Ungroup(AddColumns(…, Split(QRCodes, ";")), "Codes")</text>
+
+<path class="flowln" d="M600,1030 L600,1064"/>
+
+<!-- ===================== STEP 4 ===================== -->
+<rect class="stage" x="60" y="1080" width="1080" height="270"/>
+<rect class="art" x="84" y="1104" width="330" height="222"/>
+
+<!-- ART 4: tablet preview -->
+<g transform="translate(84,1104)">
+  <g transform="translate(56,22)">
+    <rect x="0" y="0" width="218" height="178" rx="14" class="metal2"/>
+    <rect x="9" y="9" width="200" height="160" rx="6" fill="#ffffff"/>
+    <!-- header inside app -->
+    <rect x="19" y="19" width="96" height="9" rx="4.5" fill="#742774"/>
+    <rect x="19" y="34" width="140" height="6" rx="3" fill="#d8d3dd"/>
+    <!-- 2x2 mini cards -->
+    <g>
+      <rect x="19" y="50" width="88" height="52" rx="4" class="paper"/>
+      <rect x="30" y="58" width="26" height="26" rx="2" fill="#22202a"/>
+      <rect x="33" y="61" width="7" height="7" fill="#ffffff"/><rect x="46" y="61" width="7" height="7" fill="#ffffff"/><rect x="33" y="74" width="7" height="7" fill="#ffffff"/>
+      <rect x="62" y="60" width="34" height="5" rx="2.5" fill="#742774"/>
+      <rect x="62" y="70" width="26" height="4" rx="2" fill="#d8d3dd"/>
+      <rect x="30" y="90" width="66" height="4" rx="2" fill="#e2dee6"/>
+
+      <rect x="111" y="50" width="88" height="52" rx="4" class="paper"/>
+      <rect x="122" y="58" width="26" height="26" rx="2" fill="#22202a"/>
+      <rect x="125" y="61" width="7" height="7" fill="#ffffff"/><rect x="138" y="61" width="7" height="7" fill="#ffffff"/><rect x="125" y="74" width="7" height="7" fill="#ffffff"/>
+      <rect x="154" y="60" width="34" height="5" rx="2.5" fill="#742774"/>
+      <rect x="154" y="70" width="26" height="4" rx="2" fill="#d8d3dd"/>
+      <rect x="122" y="90" width="66" height="4" rx="2" fill="#e2dee6"/>
+
+      <rect x="19" y="108" width="88" height="52" rx="4" class="paper"/>
+      <rect x="30" y="116" width="26" height="26" rx="2" fill="#22202a"/>
+      <rect x="33" y="119" width="7" height="7" fill="#ffffff"/><rect x="46" y="119" width="7" height="7" fill="#ffffff"/><rect x="33" y="132" width="7" height="7" fill="#ffffff"/>
+      <rect x="62" y="118" width="34" height="5" rx="2.5" fill="#742774"/>
+      <rect x="62" y="128" width="26" height="4" rx="2" fill="#d8d3dd"/>
+      <rect x="30" y="148" width="66" height="4" rx="2" fill="#e2dee6"/>
+
+      <rect x="111" y="108" width="88" height="52" rx="4" class="paper"/>
+      <rect x="122" y="116" width="26" height="26" rx="2" fill="#22202a"/>
+      <rect x="125" y="119" width="7" height="7" fill="#ffffff"/><rect x="138" y="119" width="7" height="7" fill="#ffffff"/><rect x="125" y="132" width="7" height="7" fill="#ffffff"/>
+      <rect x="154" y="118" width="34" height="5" rx="2.5" fill="#742774"/>
+      <rect x="154" y="128" width="26" height="4" rx="2" fill="#d8d3dd"/>
+      <rect x="122" y="148" width="66" height="4" rx="2" fill="#e2dee6"/>
+    </g>
+  </g>
+</g>
+
+<circle class="numBg" cx="462" cy="1136" r="17"/>
+<text class="num" x="457" y="1142">4</text>
+<text class="title" x="494" y="1143">The desk sees them before printing</text>
+<text class="body" x="494" y="1177">Every voucher appears on screen as a card: batch name, QR image, the code in plain</text>
+<text class="body" x="494" y="1200">text, and whose it is. The person at the desk can see at a glance that the right name is</text>
+<text class="body" x="494" y="1223">on the right vouchers before a single sheet of paper is used.</text>
+<text class="note" x="494" y="1256">The code is always printed as text next to its QR. If the image service is having a bad day</text>
+<text class="note" x="494" y="1277">the voucher is still perfectly redeemable — it just has to be typed instead of scanned.</text>
+<text class="mono" x="494" y="1310">Gallery over colCards · one card per record</text>
+
+<path class="flowln" d="M600,1350 L600,1384"/>
+
+<!-- ===================== STEP 5 ===================== -->
+<rect class="stage" x="60" y="1400" width="1080" height="270"/>
+<rect class="art" x="84" y="1424" width="330" height="222"/>
+
+<!-- ART 5: printer with sheet -->
+<g transform="translate(84,1424)">
+  <!-- emerging sheet -->
+  <g transform="translate(96,16)">
+    <rect x="0" y="0" width="140" height="104" rx="4" fill="#ffffff" stroke="#d8d3dd"/>
+    <rect x="12" y="12" width="72" height="7" rx="3.5" fill="#742774"/>
+    <rect x="12" y="25" width="46" height="5" rx="2.5" fill="#d8d3dd"/>
+    <g>
+      <rect x="12" y="38" width="56" height="26" rx="3" fill="#faf7fc" stroke="#e2dee6"/>
+      <rect x="18" y="43" width="16" height="16" rx="2" fill="#22202a"/>
+      <rect x="38" y="45" width="24" height="4" rx="2" fill="#c9a3d4"/>
+      <rect x="38" y="53" width="16" height="3" rx="1.5" fill="#e2dee6"/>
+
+      <rect x="76" y="38" width="56" height="26" rx="3" fill="#faf7fc" stroke="#e2dee6"/>
+      <rect x="82" y="43" width="16" height="16" rx="2" fill="#22202a"/>
+      <rect x="102" y="45" width="24" height="4" rx="2" fill="#c9a3d4"/>
+      <rect x="102" y="53" width="16" height="3" rx="1.5" fill="#e2dee6"/>
+
+      <rect x="12" y="70" width="56" height="26" rx="3" fill="#faf7fc" stroke="#e2dee6"/>
+      <rect x="18" y="75" width="16" height="16" rx="2" fill="#22202a"/>
+      <rect x="38" y="77" width="24" height="4" rx="2" fill="#c9a3d4"/>
+      <rect x="38" y="85" width="16" height="3" rx="1.5" fill="#e2dee6"/>
+
+      <rect x="76" y="70" width="56" height="26" rx="3" fill="#faf7fc" stroke="#e2dee6"/>
+      <rect x="82" y="75" width="16" height="16" rx="2" fill="#22202a"/>
+      <rect x="102" y="77" width="24" height="4" rx="2" fill="#c9a3d4"/>
+      <rect x="102" y="85" width="16" height="3" rx="1.5" fill="#e2dee6"/>
+    </g>
+  </g>
+  <!-- printer body -->
+  <g transform="translate(70,116)">
+    <rect x="0" y="0" width="192" height="18" rx="4" class="metal2"/>
+    <rect x="-8" y="16" width="208" height="62" rx="10" class="metal"/>
+    <rect x="30" y="16" width="148" height="6" rx="3" fill="#2b2833"/>
+    <circle cx="24" cy="46" r="6" class="accent"/>
+    <rect x="42" y="42" width="46" height="7" rx="3.5" fill="#6f6a7c"/>
+    <rect x="-8" y="70" width="208" height="10" rx="4" class="metal2"/>
+    <rect x="52" y="80" width="104" height="6" rx="3" fill="#3a3644"/>
+  </g>
+  <!-- scissors cut hint -->
+  <path d="M262,60 L302,60" stroke="#a19f9d" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <g transform="translate(300,52)">
+    <circle cx="4" cy="3" r="3.4" fill="none" stroke="#8a8886" stroke-width="1.6"/>
+    <circle cx="4" cy="13" r="3.4" fill="none" stroke="#8a8886" stroke-width="1.6"/>
+    <path d="M7,5 L20,11 M7,11 L20,5" stroke="#8a8886" stroke-width="1.6" stroke-linecap="round"/>
+  </g>
+</g>
+
+<circle class="numBg" cx="462" cy="1456" r="17"/>
+<text class="num" x="457" y="1462">5</text>
+<text class="title" x="494" y="1463">A cloud flow renders the printable sheet</text>
+<text class="body" x="494" y="1497">The cards are sent to a flow, which lays them out as an A4 page and converts it to PDF</text>
+<text class="body" x="494" y="1520">using SharePoint's own file converter — the same one behind "Download as PDF" in</text>
+<text class="body" x="494" y="1543">Office, so no paid connector is involved. The app opens the finished file.</text>
+<text class="note" x="494" y="1576">Cards are laid out two across with a rule that forbids splitting one across a page break, so</text>
+<text class="note" x="494" y="1597">a fourteen-voucher sheet cuts cleanly with scissors instead of losing half a QR code.</text>
+<text class="mono" x="494" y="1630">SharePoint · Convert file → PDF → back to the app</text>
+
+</svg>

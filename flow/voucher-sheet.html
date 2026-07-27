@@ -12,6 +12,12 @@
     {{COUNT}}      number of vouchers
     {{GENERATED}}  timestamp string, already formatted by the app
     {{CARDS}}      the concatenated card blocks
+
+  There are no <img> tags anywhere in here, and that is deliberate. SharePoint's
+  Convert file action renders server-side with no network access: it will draw
+  anything embedded in the file and will not fetch anything referenced by it.
+  The barcodes below are therefore drawn as ordinary <i> elements with widths —
+  no image, no font, no request. See docs/ARCHITECTURE.md.
 -->
 <html lang="en">
 <head>
@@ -62,15 +68,34 @@
     margin-bottom: 3mm;
   }
 
-  .card img {
-    width: 38mm;
-    height: 38mm;
-    display: block;
-    margin: 0 auto 3mm auto;
-  }
+  /* ---- the barcode ----------------------------------------------------
+     Code 39, drawn as bars. Each character is nine alternating elements
+     starting with a bar; three of the nine are wide. A 3:1 wide-to-narrow
+     ratio is comfortably inside spec.
 
-  /* The code is printed as text as well as encoded. If the QR service is
-     unreachable the voucher is still redeemable by hand. */
+     The quiet zone is not decoration — Code 39 requires at least ten narrow
+     widths of blank space either side or scanners will not see the barcode
+     at all. That is what the 5mm padding is doing.
+     -------------------------------------------------------------------- */
+  .bc {
+    font-size: 0;          /* kills inline-block whitespace between elements */
+    white-space: nowrap;
+    background: #fff;
+    padding: 2mm 5mm;      /* quiet zone */
+    margin-bottom: 2mm;
+  }
+  .bc i {
+    display: inline-block;
+    height: 14mm;
+    vertical-align: top;
+  }
+  .bn { width: 0.4mm; background: #000; }   /* narrow bar */
+  .bw { width: 1.2mm; background: #000; }   /* wide bar */
+  .sn { width: 0.4mm; background: #fff; }   /* narrow space */
+  .sw { width: 1.2mm; background: #fff; }   /* wide space */
+
+  /* The code is printed as text as well as encoded. If anything at all goes
+     wrong with the bars, the voucher is still redeemable by hand. */
   .card .code {
     font-family: Consolas, "Courier New", monospace;
     font-size: 17px;
@@ -107,13 +132,15 @@
 </html>
 
 <!--
-  One card block. The flow emits this per record in the cards JSON.
+  One card block. The flow emits this per record in the cards JSON. The contents of
+  .bc come straight from the app, which builds them in Power Fx from the Code 39
+  table — see app/README.md.
 
   <div class="card">
     <div class="batch">Rosh Hashana</div>
-    <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&amp;margin=0&amp;data=T123" alt="T123">
+    <div class="bc"><i class="bn"></i><i class="sw"></i><i class="bn"></i>…</div>
     <div class="code">T123</div>
     <div class="who">Judith Galili</div>
-    <div class="when">Generated 26 Jul 2026, 18:20</div>
+    <div class="when">Generated 27 Jul 2026, 09:12</div>
   </div>
 -->

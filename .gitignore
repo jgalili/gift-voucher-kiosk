@@ -1,0 +1,15 @@
+# Build / export artefacts
+*.msapp.bak
+obj/
+bin/
+
+# Local editor and OS noise
+.vscode/
+.idea/
+.claude/
+.DS_Store
+Thumbs.db
+
+# Anything containing a real tenant URL or connection id
+local.settings.json
+*.local.json

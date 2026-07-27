@@ -155,13 +155,13 @@
 
 <circle class="numBg" cx="462" cy="496" r="17"/>
 <text class="num" x="457" y="502">2</text>
-<text class="title" x="494" y="503">Their rows are found by email</text>
-<text class="body" x="494" y="537">The email from the badge is matched against the list's person column. Every voucher</text>
-<text class="body" x="494" y="560">batch belonging to that employee comes back — one row per batch, however many</text>
-<text class="body" x="494" y="583">codes each of those rows happens to be carrying.</text>
-<text class="note" x="494" y="616">Nothing is found? The screen says so and stays put, ready for the next card. An employee</text>
-<text class="note" x="494" y="637">with no vouchers and an unrecognised badge look the same from here, and that is fine.</text>
-<text class="mono" x="494" y="670">Filter(GiftVouchers, Employee.Email = gblScanId)</text>
+<text class="title" x="494" y="503">Their uncollected rows are found</text>
+<text class="body" x="494" y="537">The email from the badge is matched against the list's person column, and any batch</text>
+<text class="body" x="494" y="560">already marked as printed is dropped. What is left is what they have not yet been</text>
+<text class="body" x="494" y="583">given, however many codes each of those rows happens to be carrying.</text>
+<text class="note" x="494" y="616">Already collected everything? The screen says so by name and count, so the desk can</text>
+<text class="note" x="494" y="637">explain rather than guess. An unrecognised badge gets its own, different message.</text>
+<text class="mono" x="494" y="670">Filter(colAll, Printed &lt;&gt; true)</text>
 
 <path class="flowln" d="M600,710 L600,744"/>
 
@@ -185,25 +185,19 @@
   <g>
     <g transform="translate(20,112)">
       <rect x="0" y="0" width="80" height="86" rx="6" class="paper"/>
-      <rect x="22" y="10" width="36" height="36" rx="3" fill="#22202a"/>
-      <rect x="27" y="15" width="9" height="9" fill="#ffffff"/><rect x="44" y="15" width="9" height="9" fill="#ffffff"/>
-      <rect x="27" y="32" width="9" height="9" fill="#ffffff"/><rect x="42" y="30" width="6" height="6" fill="#ffffff"/>
+      <rect x="14.0" y="14" width="1.0" height="30" fill="#22202a"/><rect x="18.1" y="14" width="3.1" height="30" fill="#22202a"/><rect x="22.2" y="14" width="3.1" height="30" fill="#22202a"/><rect x="26.2" y="14" width="3.1" height="30" fill="#22202a"/><rect x="30.3" y="14" width="1.0" height="30" fill="#22202a"/><rect x="32.4" y="14" width="3.1" height="30" fill="#22202a"/><rect x="36.4" y="14" width="1.0" height="30" fill="#22202a"/><rect x="38.5" y="14" width="1.0" height="30" fill="#22202a"/><rect x="40.5" y="14" width="1.0" height="30" fill="#22202a"/><rect x="42.5" y="14" width="1.0" height="30" fill="#22202a"/><rect x="44.6" y="14" width="1.0" height="30" fill="#22202a"/><rect x="46.6" y="14" width="1.0" height="30" fill="#22202a"/><rect x="50.7" y="14" width="1.0" height="30" fill="#22202a"/><rect x="54.8" y="14" width="3.1" height="30" fill="#22202a"/><rect x="58.9" y="14" width="3.1" height="30" fill="#22202a"/><rect x="62.9" y="14" width="1.0" height="30" fill="#22202a"/><rect x="65.0" y="14" width="1.0" height="30" fill="#22202a"/>
       <text x="40" y="62" font-family="Consolas, Menlo, monospace" font-size="12" fill="#201f1e" text-anchor="middle">T123</text>
       <rect x="18" y="70" width="44" height="5" rx="2.5" fill="#e2dee6"/>
     </g>
     <g transform="translate(125,112)">
       <rect x="0" y="0" width="80" height="86" rx="6" class="paper"/>
-      <rect x="22" y="10" width="36" height="36" rx="3" fill="#22202a"/>
-      <rect x="27" y="15" width="9" height="9" fill="#ffffff"/><rect x="44" y="15" width="9" height="9" fill="#ffffff"/>
-      <rect x="27" y="32" width="9" height="9" fill="#ffffff"/><rect x="46" y="34" width="6" height="6" fill="#ffffff"/>
+      <rect x="14.0" y="14" width="1.0" height="30" fill="#22202a"/><rect x="16.0" y="14" width="3.1" height="30" fill="#22202a"/><rect x="20.1" y="14" width="1.0" height="30" fill="#22202a"/><rect x="22.2" y="14" width="1.0" height="30" fill="#22202a"/><rect x="26.2" y="14" width="1.0" height="30" fill="#22202a"/><rect x="28.3" y="14" width="3.1" height="30" fill="#22202a"/><rect x="32.4" y="14" width="1.0" height="30" fill="#22202a"/><rect x="34.4" y="14" width="1.0" height="30" fill="#22202a"/><rect x="36.4" y="14" width="3.1" height="30" fill="#22202a"/><rect x="40.5" y="14" width="1.0" height="30" fill="#22202a"/><rect x="44.6" y="14" width="1.0" height="30" fill="#22202a"/><rect x="46.6" y="14" width="3.1" height="30" fill="#22202a"/><rect x="52.7" y="14" width="1.0" height="30" fill="#22202a"/><rect x="54.8" y="14" width="3.1" height="30" fill="#22202a"/><rect x="60.9" y="14" width="1.0" height="30" fill="#22202a"/><rect x="62.9" y="14" width="1.0" height="30" fill="#22202a"/><rect x="65.0" y="14" width="1.0" height="30" fill="#22202a"/>
       <text x="40" y="62" font-family="Consolas, Menlo, monospace" font-size="12" fill="#201f1e" text-anchor="middle">T543</text>
       <rect x="18" y="70" width="44" height="5" rx="2.5" fill="#e2dee6"/>
     </g>
     <g transform="translate(230,112)">
       <rect x="0" y="0" width="80" height="86" rx="6" class="paper"/>
-      <rect x="22" y="10" width="36" height="36" rx="3" fill="#22202a"/>
-      <rect x="27" y="15" width="9" height="9" fill="#ffffff"/><rect x="44" y="15" width="9" height="9" fill="#ffffff"/>
-      <rect x="27" y="32" width="9" height="9" fill="#ffffff"/><rect x="40" y="36" width="6" height="6" fill="#ffffff"/>
+      <rect x="14.0" y="14" width="1.0" height="30" fill="#22202a"/><rect x="16.0" y="14" width="1.0" height="30" fill="#22202a"/><rect x="18.0" y="14" width="3.0" height="30" fill="#22202a"/><rect x="22.0" y="14" width="3.0" height="30" fill="#22202a"/><rect x="26.0" y="14" width="1.0" height="30" fill="#22202a"/><rect x="30.0" y="14" width="3.0" height="30" fill="#22202a"/><rect x="34.0" y="14" width="1.0" height="30" fill="#22202a"/><rect x="36.0" y="14" width="1.0" height="30" fill="#22202a"/><rect x="38.0" y="14" width="3.0" height="30" fill="#22202a"/><rect x="42.0" y="14" width="1.0" height="30" fill="#22202a"/><rect x="46.0" y="14" width="3.0" height="30" fill="#22202a"/><rect x="52.0" y="14" width="1.0" height="30" fill="#22202a"/><rect x="54.0" y="14" width="1.0" height="30" fill="#22202a"/><rect x="56.0" y="14" width="3.0" height="30" fill="#22202a"/><rect x="60.0" y="14" width="3.0" height="30" fill="#22202a"/>
       <text x="40" y="62" font-family="Consolas, Menlo, monospace" font-size="12" fill="#201f1e" text-anchor="middle">T666</text>
       <rect x="18" y="70" width="44" height="5" rx="2.5" fill="#e2dee6"/>
     </g>
@@ -237,30 +231,22 @@
     <!-- 2x2 mini cards -->
     <g>
       <rect x="19" y="50" width="88" height="52" rx="4" class="paper"/>
-      <rect x="30" y="58" width="26" height="26" rx="2" fill="#22202a"/>
-      <rect x="33" y="61" width="7" height="7" fill="#ffffff"/><rect x="46" y="61" width="7" height="7" fill="#ffffff"/><rect x="33" y="74" width="7" height="7" fill="#ffffff"/>
-      <rect x="62" y="60" width="34" height="5" rx="2.5" fill="#742774"/>
+      <rect x="26.0" y="60" width="1.0" height="22" fill="#22202a"/><rect x="28.1" y="60" width="1.0" height="22" fill="#22202a"/><rect x="30.1" y="60" width="1.0" height="22" fill="#22202a"/><rect x="32.2" y="60" width="3.1" height="22" fill="#22202a"/><rect x="36.3" y="60" width="1.0" height="22" fill="#22202a"/><rect x="40.4" y="60" width="1.0" height="22" fill="#22202a"/><rect x="44.5" y="60" width="3.1" height="22" fill="#22202a"/><rect x="48.7" y="60" width="1.0" height="22" fill="#22202a"/><rect x="50.7" y="60" width="1.0" height="22" fill="#22202a"/><rect x="54.8" y="60" width="1.0" height="22" fill="#22202a"/><rect x="56.9" y="60" width="3.1" height="22" fill="#22202a"/><rect x="62" y="60" width="34" height="5" rx="2.5" fill="#742774"/>
       <rect x="62" y="70" width="26" height="4" rx="2" fill="#d8d3dd"/>
       <rect x="30" y="90" width="66" height="4" rx="2" fill="#e2dee6"/>
 
       <rect x="111" y="50" width="88" height="52" rx="4" class="paper"/>
-      <rect x="122" y="58" width="26" height="26" rx="2" fill="#22202a"/>
-      <rect x="125" y="61" width="7" height="7" fill="#ffffff"/><rect x="138" y="61" width="7" height="7" fill="#ffffff"/><rect x="125" y="74" width="7" height="7" fill="#ffffff"/>
-      <rect x="154" y="60" width="34" height="5" rx="2.5" fill="#742774"/>
+      <rect x="118.0" y="60" width="1.0" height="22" fill="#22202a"/><rect x="120.1" y="60" width="3.1" height="22" fill="#22202a"/><rect x="124.2" y="60" width="1.0" height="22" fill="#22202a"/><rect x="126.2" y="60" width="3.1" height="22" fill="#22202a"/><rect x="130.4" y="60" width="3.1" height="22" fill="#22202a"/><rect x="136.5" y="60" width="3.1" height="22" fill="#22202a"/><rect x="140.7" y="60" width="3.1" height="22" fill="#22202a"/><rect x="144.8" y="60" width="1.0" height="22" fill="#22202a"/><rect x="146.8" y="60" width="1.0" height="22" fill="#22202a"/><rect x="148.9" y="60" width="1.0" height="22" fill="#22202a"/><rect x="151.0" y="60" width="1.0" height="22" fill="#22202a"/><rect x="154" y="60" width="34" height="5" rx="2.5" fill="#742774"/>
       <rect x="154" y="70" width="26" height="4" rx="2" fill="#d8d3dd"/>
       <rect x="122" y="90" width="66" height="4" rx="2" fill="#e2dee6"/>
 
       <rect x="19" y="108" width="88" height="52" rx="4" class="paper"/>
-      <rect x="30" y="116" width="26" height="26" rx="2" fill="#22202a"/>
-      <rect x="33" y="119" width="7" height="7" fill="#ffffff"/><rect x="46" y="119" width="7" height="7" fill="#ffffff"/><rect x="33" y="132" width="7" height="7" fill="#ffffff"/>
-      <rect x="62" y="118" width="34" height="5" rx="2.5" fill="#742774"/>
+      <rect x="26.0" y="118" width="2.9" height="22" fill="#22202a"/><rect x="31.8" y="118" width="2.9" height="22" fill="#22202a"/><rect x="35.7" y="118" width="1.0" height="22" fill="#22202a"/><rect x="39.6" y="118" width="1.0" height="22" fill="#22202a"/><rect x="43.5" y="118" width="2.9" height="22" fill="#22202a"/><rect x="49.3" y="118" width="1.0" height="22" fill="#22202a"/><rect x="51.3" y="118" width="1.0" height="22" fill="#22202a"/><rect x="53.2" y="118" width="2.9" height="22" fill="#22202a"/><rect x="57.1" y="118" width="2.9" height="22" fill="#22202a"/><rect x="62" y="118" width="34" height="5" rx="2.5" fill="#742774"/>
       <rect x="62" y="128" width="26" height="4" rx="2" fill="#d8d3dd"/>
       <rect x="30" y="148" width="66" height="4" rx="2" fill="#e2dee6"/>
 
       <rect x="111" y="108" width="88" height="52" rx="4" class="paper"/>
-      <rect x="122" y="116" width="26" height="26" rx="2" fill="#22202a"/>
-      <rect x="125" y="119" width="7" height="7" fill="#ffffff"/><rect x="138" y="119" width="7" height="7" fill="#ffffff"/><rect x="125" y="132" width="7" height="7" fill="#ffffff"/>
-      <rect x="154" y="118" width="34" height="5" rx="2.5" fill="#742774"/>
+      <rect x="118.0" y="118" width="1.0" height="22" fill="#22202a"/><rect x="120.0" y="118" width="3.0" height="22" fill="#22202a"/><rect x="124.0" y="118" width="1.0" height="22" fill="#22202a"/><rect x="126.0" y="118" width="1.0" height="22" fill="#22202a"/><rect x="128.0" y="118" width="1.0" height="22" fill="#22202a"/><rect x="130.0" y="118" width="1.0" height="22" fill="#22202a"/><rect x="132.0" y="118" width="1.0" height="22" fill="#22202a"/><rect x="134.0" y="118" width="1.0" height="22" fill="#22202a"/><rect x="136.0" y="118" width="3.0" height="22" fill="#22202a"/><rect x="142.0" y="118" width="1.0" height="22" fill="#22202a"/><rect x="146.0" y="118" width="1.0" height="22" fill="#22202a"/><rect x="148.0" y="118" width="1.0" height="22" fill="#22202a"/><rect x="154" y="118" width="34" height="5" rx="2.5" fill="#742774"/>
       <rect x="154" y="128" width="26" height="4" rx="2" fill="#d8d3dd"/>
       <rect x="122" y="148" width="66" height="4" rx="2" fill="#e2dee6"/>
     </g>
@@ -270,11 +256,11 @@
 <circle class="numBg" cx="462" cy="1136" r="17"/>
 <text class="num" x="457" y="1142">4</text>
 <text class="title" x="494" y="1143">The desk sees them before printing</text>
-<text class="body" x="494" y="1177">Every voucher appears on screen as a card: batch name, QR image, the code in plain</text>
+<text class="body" x="494" y="1177">Every voucher appears on screen as a card: batch name, barcode, the code in plain</text>
 <text class="body" x="494" y="1200">text, and whose it is. The person at the desk can see at a glance that the right name is</text>
 <text class="body" x="494" y="1223">on the right vouchers before a single sheet of paper is used.</text>
-<text class="note" x="494" y="1256">The code is always printed as text next to its QR. If the image service is having a bad day</text>
-<text class="note" x="494" y="1277">the voucher is still perfectly redeemable — it just has to be typed instead of scanned.</text>
+<text class="note" x="494" y="1256">The code is always printed as text beside its barcode. If anything at all goes wrong with</text>
+<text class="note" x="494" y="1277">the bars, the voucher is still redeemable — it just has to be typed instead of scanned.</text>
 <text class="mono" x="494" y="1310">Gallery over colCards · one card per record</text>
 
 <path class="flowln" d="M600,1350 L600,1384"/>
@@ -292,22 +278,22 @@
     <rect x="12" y="25" width="46" height="5" rx="2.5" fill="#d8d3dd"/>
     <g>
       <rect x="12" y="38" width="56" height="26" rx="3" fill="#faf7fc" stroke="#e2dee6"/>
-      <rect x="18" y="43" width="16" height="16" rx="2" fill="#22202a"/>
+      <rect x="15.0" y="46" width="1.0" height="11" fill="#22202a"/><rect x="17.1" y="46" width="1.0" height="11" fill="#22202a"/><rect x="21.3" y="46" width="1.0" height="11" fill="#22202a"/><rect x="25.5" y="46" width="1.0" height="11" fill="#22202a"/><rect x="27.6" y="46" width="1.0" height="11" fill="#22202a"/><rect x="31.8" y="46" width="1.0" height="11" fill="#22202a"/><rect x="33.9" y="46" width="1.0" height="11" fill="#22202a"/><rect x="36.0" y="46" width="1.0" height="11" fill="#22202a"/>
       <rect x="38" y="45" width="24" height="4" rx="2" fill="#c9a3d4"/>
       <rect x="38" y="53" width="16" height="3" rx="1.5" fill="#e2dee6"/>
 
       <rect x="76" y="38" width="56" height="26" rx="3" fill="#faf7fc" stroke="#e2dee6"/>
-      <rect x="82" y="43" width="16" height="16" rx="2" fill="#22202a"/>
+      <rect x="79.0" y="46" width="3.1" height="11" fill="#22202a"/><rect x="85.3" y="46" width="3.1" height="11" fill="#22202a"/><rect x="89.5" y="46" width="1.0" height="11" fill="#22202a"/><rect x="91.6" y="46" width="1.0" height="11" fill="#22202a"/><rect x="93.7" y="46" width="1.0" height="11" fill="#22202a"/><rect x="97.9" y="46" width="1.0" height="11" fill="#22202a"/><rect x="100.0" y="46" width="1.0" height="11" fill="#22202a"/>
       <rect x="102" y="45" width="24" height="4" rx="2" fill="#c9a3d4"/>
       <rect x="102" y="53" width="16" height="3" rx="1.5" fill="#e2dee6"/>
 
       <rect x="12" y="70" width="56" height="26" rx="3" fill="#faf7fc" stroke="#e2dee6"/>
-      <rect x="18" y="75" width="16" height="16" rx="2" fill="#22202a"/>
+      <rect x="15.0" y="78" width="3.1" height="11" fill="#22202a"/><rect x="21.3" y="78" width="1.0" height="11" fill="#22202a"/><rect x="23.4" y="78" width="3.1" height="11" fill="#22202a"/><rect x="29.7" y="78" width="1.0" height="11" fill="#22202a"/><rect x="33.9" y="78" width="1.0" height="11" fill="#22202a"/><rect x="36.0" y="78" width="1.0" height="11" fill="#22202a"/>
       <rect x="38" y="77" width="24" height="4" rx="2" fill="#c9a3d4"/>
       <rect x="38" y="85" width="16" height="3" rx="1.5" fill="#e2dee6"/>
 
       <rect x="76" y="70" width="56" height="26" rx="3" fill="#faf7fc" stroke="#e2dee6"/>
-      <rect x="82" y="75" width="16" height="16" rx="2" fill="#22202a"/>
+      <rect x="79.0" y="78" width="1.0" height="11" fill="#22202a"/><rect x="81.0" y="78" width="1.0" height="11" fill="#22202a"/><rect x="83.0" y="78" width="1.0" height="11" fill="#22202a"/><rect x="87.0" y="78" width="1.0" height="11" fill="#22202a"/><rect x="91.0" y="78" width="3.0" height="11" fill="#22202a"/><rect x="95.0" y="78" width="1.0" height="11" fill="#22202a"/><rect x="97.0" y="78" width="1.0" height="11" fill="#22202a"/>
       <rect x="102" y="77" width="24" height="4" rx="2" fill="#c9a3d4"/>
       <rect x="102" y="85" width="16" height="3" rx="1.5" fill="#e2dee6"/>
     </g>
@@ -333,12 +319,12 @@
 
 <circle class="numBg" cx="462" cy="1456" r="17"/>
 <text class="num" x="457" y="1462">5</text>
-<text class="title" x="494" y="1463">A cloud flow renders the printable sheet</text>
-<text class="body" x="494" y="1497">The cards are sent to a flow, which lays them out as an A4 page and converts it to PDF</text>
-<text class="body" x="494" y="1520">using SharePoint's own file converter — the same one behind "Download as PDF" in</text>
-<text class="body" x="494" y="1543">Office, so no paid connector is involved. The app opens the finished file.</text>
-<text class="note" x="494" y="1576">Cards are laid out two across with a rule that forbids splitting one across a page break, so</text>
-<text class="note" x="494" y="1597">a fourteen-voucher sheet cuts cleanly with scissors instead of losing half a QR code.</text>
-<text class="mono" x="494" y="1630">SharePoint · Convert file → PDF → back to the app</text>
+<text class="title" x="494" y="1463">A cloud flow renders the sheet</text>
+<text class="body" x="494" y="1497">The cards go to a flow that lays them out as an A4 page and converts it with SharePoint's</text>
+<text class="body" x="494" y="1520">own file converter. The barcodes are plain HTML elements, so nothing has to be fetched.</text>
+<text class="body" x="494" y="1543">Only once the file exists are the batches marked as collected.</text>
+<text class="note" x="494" y="1576">Two cards across, with a rule that forbids splitting one across a page break, so the sheet</text>
+<text class="note" x="494" y="1597">cuts cleanly with scissors instead of losing half a barcode.</text>
+<text class="mono" x="494" y="1630">Convert file → PDF → Patch(Printed: true)</text>
 
 </svg>
